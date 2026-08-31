@@ -1,0 +1,13 @@
+# Icons are inlined as base64 by build.sh, so their bytes end up inside
+# apps.html. On Windows, git was checking tracker.svg out with CRLF line
+# endings, which the encoder then baked into the data URI — so the same commit
+# built on a Mac and on a PC produced two different pages.
+#
+# Harmless to render, but it means the build is not reproducible, and a
+# generated file that differs by platform is one nobody can verify.
+*.svg -text
+*.png binary
+
+# apps.html is generated. Keep it byte-identical wherever it is built, so a
+# diff against a deployed copy means something.
+apps.html -text

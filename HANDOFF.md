@@ -20,12 +20,43 @@ Nobody can see it yet.
 | `build.sh` — generator | Complete | **Yes** — status flip tested both directions; empty section drops its heading |
 | `apps.html` — the deployable file | Generated, 892 KB | **Yes** — all links verified HTTP 200, no placeholders remain |
 | Icons | Complete | **Yes** — 9 PNGs + 1 SVG, all inlined |
-| **Deployed to app.bestrongagain.com/apps** | **NOT DONE** | — |
+| **Deployed to app.bestrongagain.com/apps** | **DONE** 2026-08-31 | **Yes** — 200, 913,670 b, md5 matches the committed file byte for byte |
 | Link from bestrongagain.com | Not done | — |
 
 ## Pick up here
 
-**Deploy it.** That is the only thing standing between this and being live.
+**Add the link from bestrongagain.com.** The page itself is live at
+<https://app.bestrongagain.com/apps/> and that is the only thing left.
+
+### Deployed — and the catch-all did not eat it
+
+The worry in the note below was right to have and did not materialise. The vhost
+ends with `try_files $uri $uri/ /index.html`, and a real directory satisfies
+`$uri/` before the SPA fallback is reached, so no nginx change was needed.
+
+Verified after deploying:
+
+| | |
+|---|---|
+| `/apps/` | 200, 913,670 b, `<title>Apps — Glen Rogers, Be Strong Again</title>` |
+| `/apps` | 301 → `https://app.bestrongagain.com/apps/` — correct scheme, no downgrade to http |
+| `/` and `/checkin` | still the React app, untouched |
+
+### One real bug found on the way: the build is not reproducible
+
+Regenerating `apps.html` on Windows produced a **different file** from the one
+the Mac committed — and not just line endings. Git was checking `tracker.svg`
+out with CRLF, and `build.sh` base64-encodes the icon bytes straight into the
+page, so the CRLFs ended up *inside* the data URI.
+
+Renders identically, but it means the same commit built on two machines gives
+two different pages, and a generated file that differs by platform is one nobody
+can diff against what is deployed.
+
+Fixed with a `.gitattributes` marking `*.svg -text`, `*.png binary` and
+`apps.html -text`. **The deployed file is the Mac-built one** — extracted with
+`git show HEAD:apps.html` rather than taken from the Windows working tree, and
+md5-checked against the server after upload.
 
 It could not be done from the Mac that built it: `~/Desktop/polly-connect-key.pem`
 is referenced by `bsa-coach-platform/docs/DEPLOYMENT_AND_GIT_SYNC.md` but **is not
