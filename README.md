@@ -6,20 +6,23 @@ why, and how to reach him.
 Plain HTML, no framework, no build tooling. Edit `index.html`, run `./build.sh`,
 deploy one file.
 
-## Before it goes live
+## Keeping it current
 
-Three placeholders must be replaced. **Search for `REPLACE_` and none should remain.**
+All links are filled in and were verified live (HTTP 200) on 2026-08-31:
+`polly-connect.com`, `app.bestrongagain.com`, and `mailto:wisco.barbell@gmail.com`.
 
-| Placeholder | What goes there |
+## Statuses — confirmed 2026-08-31
+
+| Group | Apps |
 |---|---|
-| `REPLACE_WITH_EMAIL` | The address for "Tell me what you need" |
-| `REPLACE_WITH_POLLY_URL` | Polly's live PWA address |
-| `REPLACE_WITH_TRACKER_URL` | The Workout Tracker's live address |
+| **On the App Store** | The Week Ender · Cabin Notes · Footsteps of the Teacher |
+| **In review** | Strongman Contest · Season Book |
+| **Being built** | Two or Three · Spotter · BizLedger |
 
-**Also confirm the App Store statuses.** They are a best guess: The Week Ender,
-Cabin Notes and Footsteps are shown as live; Strongman Contest and Season Book as
-submitted; Two or Three, Spotter and BizLedger as coming. Wrong status on a public
-page is the kind of small thing people notice.
+**These go stale.** When Strongman Contest or Season Book is approved, move its
+`<div class="app">` block up into the *On the App Store* section and change the
+badge from `status soon` to `status live`. Same when anything ships from *Being
+built*. Wrong status on a public page is the kind of small thing people notice.
 
 ## Deploying
 
