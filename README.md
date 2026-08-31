@@ -1,5 +1,8 @@
 # apps-page
 
+> **Picking this up? Read [HANDOFF.md](HANDOFF.md) first.** It is the living status.
+
+
 The apps page for **app.bestrongagain.com/apps** — everything Glen Rogers has built,
 why, and how to reach him.
 
