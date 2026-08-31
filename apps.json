@@ -4,56 +4,148 @@
     "name": "The Week Ender",
     "status": "live",
     "icon": "weekender.png",
-    "blurb": "A coach's Friday text message, made into an app. Answer three questions on Thursday night, get an hour-by-hour plan for the weekend on Friday morning. A rough week earns a looser plan, not a stricter one."
+    "blurb": "A plan for the weekend, made before the weekend starts. Three questions, one plan.",
+    "story": [
+      "I built this because I know what happens on Friday.",
+      "You've worked all week. You're tired. The weekend starts, and suddenly all the good intentions go out the window.",
+      "The Week Ender gives you a plan before the weekend starts.",
+      "Three questions. A simple plan. Something to follow when Friday turns into Saturday and Saturday turns into *“I'll start again Monday.”*",
+      "**I needed this. So I built it.**"
+    ]
   },
   {
     "id": "cabin",
     "name": "Cabin Notes",
     "status": "live",
     "icon": "cabin.png",
-    "blurb": "For people who own a seasonal cabin they do not rent out. Photo inventory, a running bring-list, the closing and opening checklist, and a guest guide you can text. Every part of it works in airplane mode."
+    "blurb": "Everything about a seasonal cabin in one place — and it still works with no signal.",
+    "story": [
+      "I own a seasonal cabin.",
+      "And every time we went up there, somebody forgot something.",
+      "Or we couldn't remember what was already there.",
+      "Or something needed fixing.",
+      "Or somebody asked, *“How do you turn the water on again?”*",
+      "So I built the app I wanted to have.",
+      "Keep track of what's at the cabin. Take pictures. Make the bring-list. Keep the opening and closing checklist. Send guests the instructions.",
+      "And when you're sitting at the cabin with no cell service?",
+      "**It still works.**"
+    ]
   },
   {
     "id": "footsteps",
     "name": "Footsteps of the Teacher",
     "status": "live",
     "icon": "footsteps.png",
-    "blurb": "Kids learn to write real code by building the Bible stories they already know by heart. Type a line, the donkey appears. Ada the owl catches typos, guesses what you meant, and never scolds."
+    "blurb": "Kids learn real code by building Bible stories, with an owl who helps instead of scolding.",
+    "story": [
+      "I wanted my kids to learn how to code.",
+      "But I didn't want them staring at another boring programming tutorial.",
+      "I wanted them to build something they already knew.",
+      "**Bible stories.**",
+      "So I started building a world where kids learn real code by making those stories come alive.",
+      "Write the code. See what happens.",
+      "Make the donkey move. Build the story. Fix the mistake.",
+      "And when the code doesn't work, Ada the owl is there to help instead of making them feel stupid.",
+      "**Kids don't need another game that wastes their time. They need something that makes them want to learn.**"
+    ]
   },
   {
     "id": "strongman",
     "name": "Strongman Contest",
     "status": "review",
     "icon": "strongman.png",
-    "blurb": "Run a contest from one phone with no internet, because gyms are basements. Place-point scoring done properly — an event win is worth N points for N entrants, ties split the pooled slots, and holds sort the opposite way to medleys."
+    "blurb": "Run a whole contest from one phone, in a basement, with no internet.",
+    "story": [
+      "I've run strongman contests.",
+      "I've stood in a gym trying to keep track of points, placings, ties, and events while also trying to actually run the contest.",
+      "And a lot of the time you're in a basement with **zero cell service.**",
+      "So I built the scoring system I wanted.",
+      "One phone.",
+      "No internet.",
+      "Enter the athletes. Enter the events. Let the app do the math.",
+      "The scoring works the way a strongman contest should work.",
+      "**I didn't build this because I thought there was a huge market for strongman scoring apps.**",
+      "I built it because **I run strongman contests.**"
+    ]
   },
   {
     "id": "seasonbook",
     "name": "Season Book",
     "status": "review",
     "icon": "seasonbook.png",
-    "blurb": "A gymnast's meet scores across a whole season, on a parent's own iCloud. Women's four apparatus or men's six, personal bests, and a wall display for the gym television."
+    "blurb": "A gymnast's whole season, kept on your own iCloud and turned into a scrapbook you can send.",
+    "story": [
+      "If you're a gymnastics parent, you know the feeling.",
+      "Your kid competes all season. Meet after meet, score after score.",
+      "But Grandma and Grandpa can't always make it.",
+      "Mom might be at one kid's meet while Dad is taking another kid somewhere else.",
+      "Sometimes the people who want to be there the most simply can't be.",
+      "So I built Season Book.",
+      "Keep the whole season in one place. Scores, personal bests, memories — all of it.",
+      "Then turn the season into a scrapbook you can send to Grandma and Grandpa, or sit down at home and watch it together on the TV.",
+      "Because the season shouldn't only belong to the people who were sitting in the bleachers.",
+      "And your memories shouldn't belong to somebody else's server.",
+      "**Your data. Your memories. You own them. Always.**"
+    ]
   },
   {
     "id": "twoorthree",
     "name": "Two or Three",
     "status": "building",
     "icon": "twoorthree.png",
-    "blurb": "One topic, everyone at the table, and each person asked the version of the question that fits where they actually are — a six-year-old and a fourteen-year-old get different questions about the same thing. Ten minutes, then the phone goes face down. Free, with no ads and nothing to buy."
+    "blurb": "One topic, everyone at the table, and each person asked the version that fits where they are.",
+    "story": [
+      "This one started with something I kept thinking about:",
+      "**What if we actually put our phones down and talked to each other?**",
+      "Two or three people around a table.",
+      "One topic.",
+      "Everybody gets a question that makes sense for where they are in life.",
+      "A six-year-old shouldn't get the same question as a fourteen-year-old.",
+      "You talk.",
+      "You listen.",
+      "Ten minutes later, the phone goes face down.",
+      "That's it.",
+      "No ads. No subscription. Nothing to buy.",
+      "Just people talking.",
+      "**Because I think we need more of that.**"
+    ]
   },
   {
     "id": "spotter",
     "name": "Spotter",
     "status": "building",
     "icon": "spotter.png",
-    "blurb": "A gym CRM for one person running the whole place themselves. Clients, sessions and payments on your own iCloud. No server, no monthly fee."
+    "blurb": "The gym CRM for the person who owns the gym and still unlocks the door in the morning.",
+    "story": [
+      "I own a gym.",
+      "I know what it's like to be the person doing everything.",
+      "Training people. Scheduling people. Keeping track of sessions. Collecting payments. Trying to remember who trained when.",
+      "And then doing it all again tomorrow.",
+      "Spotter is the gym CRM I wanted.",
+      "**Not for a corporation with 500 employees.**",
+      "For the person who owns the gym and is still the one unlocking the door in the morning.",
+      "Clients. Sessions. Payments. Simple.",
+      "Your data stays yours. No server. No monthly fee.",
+      "**Just the stuff you actually need.**"
+    ]
   },
   {
     "id": "bizledger",
     "name": "BizLedger",
     "status": "building",
     "icon": "bizledger.png",
-    "blurb": "A bookkeeping app for people who do not want a bookkeeping app. Income, expenses and mileage in seconds. No bank connection, no reconciliation, no chart of accounts."
+    "blurb": "What came in, what went out, how many miles — without becoming an accountant.",
+    "story": [
+      "I have friends who own businesses who don't need QuickBooks.",
+      "They don't need a financial department.",
+      "They don't need a 47-step reconciliation process.",
+      "They just need to know:",
+      "**What came in?** **What went out?** **How many miles did I drive?**",
+      "That's BizLedger.",
+      "I built it for the person who has a business but doesn't want their bookkeeping app to become another job.",
+      "Simple accounting. No bank connection. No complicated chart of accounts.",
+      "**No nonsense.**"
+    ]
   },
   {
     "id": "polly",
@@ -62,7 +154,19 @@
     "icon": "polly.png",
     "url": "https://polly-connect.com",
     "cta": "Open Polly",
-    "blurb": "Every voice deserves to be remembered. Polly started as a way to ask where you put something and be told the answer — and turned into something larger about holding on to what a family knows before it is gone. Works with no internet at all."
+    "blurb": "Every voice deserves to be remembered.",
+    "story": [
+      "Polly started with a simple question:",
+      "**“Where did I put that?”**",
+      "And then I started thinking about something bigger.",
+      "Every family has knowledge that exists nowhere except inside somebody's head.",
+      "Where things are. How things work. The stories. The memories.",
+      "The little things that somebody knows because they've been around long enough to know them.",
+      "What happens when that person isn't there anymore?",
+      "So Polly became more than a voice assistant.",
+      "It's about remembering.",
+      "**Every voice deserves to be remembered.**"
+    ]
   },
   {
     "id": "tracker",
@@ -71,6 +175,17 @@
     "icon": "tracker.svg",
     "url": "https://app.bestrongagain.com",
     "cta": "Open the tracker",
-    "blurb": "Your coach writes the program, you log it on your phone set by set. Travel workouts for when you are away, a pain-and-injury video library, and a belt system for when you want to test what you have got. Free for anyone who wants to train — ask me for a code."
+    "blurb": "Your coach writes the program, you log it on your phone. Free, with a code.",
+    "story": [
+      "This is probably the most obvious one.",
+      "**I'm a coach. I needed a workout tracker.**",
+      "I didn't want another complicated fitness app trying to be your coach.",
+      "I wanted something where **I** could write the program and my clients could simply open their phone and do the work.",
+      "Set by set. Workout by workout. Keep going.",
+      "There's travel workouts for when you're away, a pain-and-injury video library, and a belt system when you're ready to see what you're really capable of.",
+      "This is the one I use with the people I train.",
+      "It's free for anyone who wants to train.",
+      "**If you want in, ask me for a code.**"
+    ]
   }
 ]
