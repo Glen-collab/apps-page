@@ -1,0 +1,76 @@
+[
+  {
+    "id": "weekender",
+    "name": "The Week Ender",
+    "status": "live",
+    "icon": "weekender.png",
+    "blurb": "A coach's Friday text message, made into an app. Answer three questions on Thursday night, get an hour-by-hour plan for the weekend on Friday morning. A rough week earns a looser plan, not a stricter one."
+  },
+  {
+    "id": "cabin",
+    "name": "Cabin Notes",
+    "status": "live",
+    "icon": "cabin.png",
+    "blurb": "For people who own a seasonal cabin they do not rent out. Photo inventory, a running bring-list, the closing and opening checklist, and a guest guide you can text. Every part of it works in airplane mode."
+  },
+  {
+    "id": "footsteps",
+    "name": "Footsteps of the Teacher",
+    "status": "live",
+    "icon": "footsteps.png",
+    "blurb": "Kids learn to write real code by building the Bible stories they already know by heart. Type a line, the donkey appears. Ada the owl catches typos, guesses what you meant, and never scolds."
+  },
+  {
+    "id": "strongman",
+    "name": "Strongman Contest",
+    "status": "review",
+    "icon": "strongman.png",
+    "blurb": "Run a contest from one phone with no internet, because gyms are basements. Place-point scoring done properly — an event win is worth N points for N entrants, ties split the pooled slots, and holds sort the opposite way to medleys."
+  },
+  {
+    "id": "seasonbook",
+    "name": "Season Book",
+    "status": "review",
+    "icon": "seasonbook.png",
+    "blurb": "A gymnast's meet scores across a whole season, on a parent's own iCloud. Women's four apparatus or men's six, personal bests, and a wall display for the gym television."
+  },
+  {
+    "id": "twoorthree",
+    "name": "Two or Three",
+    "status": "building",
+    "icon": "twoorthree.png",
+    "blurb": "One topic, everyone at the table, and each person asked the version of the question that fits where they actually are — a six-year-old and a fourteen-year-old get different questions about the same thing. Ten minutes, then the phone goes face down. Free, with no ads and nothing to buy."
+  },
+  {
+    "id": "spotter",
+    "name": "Spotter",
+    "status": "building",
+    "icon": "spotter.png",
+    "blurb": "A gym CRM for one person running the whole place themselves. Clients, sessions and payments on your own iCloud. No server, no monthly fee."
+  },
+  {
+    "id": "bizledger",
+    "name": "BizLedger",
+    "status": "building",
+    "icon": "bizledger.png",
+    "blurb": "A bookkeeping app for people who do not want a bookkeeping app. Income, expenses and mileage in seconds. No bank connection, no reconciliation, no chart of accounts."
+  },
+  {
+    "id": "polly",
+    "name": "Polly",
+    "status": "web",
+    "icon": "polly.png",
+    "url": "https://polly-connect.com",
+    "cta": "Open Polly",
+    "blurb": "Every voice deserves to be remembered. Polly started as a way to ask where you put something and be told the answer — and turned into something larger about holding on to what a family knows before it is gone. Works with no internet at all."
+  },
+  {
+    "id": "tracker",
+    "name": "Workout Tracker",
+    "status": "web",
+    "icon": "tracker.svg",
+    "url": "https://app.bestrongagain.com",
+    "cta": "Open the tracker",
+    "blurb": "Your coach writes the program, you log it on your phone set by set. Travel workouts for when you are away, a pain-and-injury video library, and a belt system for when you want to test what you have got. Free for anyone who wants to train — ask me for a code."
+  }
+]

@@ -3,8 +3,8 @@
 The apps page for **app.bestrongagain.com/apps** — everything Glen Rogers has built,
 why, and how to reach him.
 
-Plain HTML, no framework, no build tooling. Edit `index.html`, run `./build.sh`,
-deploy one file.
+Plain HTML, no framework. **`apps.json` is the data, `template.html` is the page,
+`build.sh` generates `apps.html`.** Never hand-edit `apps.html` — it is generated.
 
 ## Keeping it current
 
@@ -19,10 +19,16 @@ All links are filled in and were verified live (HTTP 200) on 2026-08-31:
 | **In review** | Strongman Contest · Season Book |
 | **Being built** | Two or Three · Spotter · BizLedger |
 
-**These go stale.** When Strongman Contest or Season Book is approved, move its
-`<div class="app">` block up into the *On the App Store* section and change the
-badge from `status soon` to `status live`. Same when anything ships from *Being
-built*. Wrong status on a public page is the kind of small thing people notice.
+**These go stale, so moving one is deliberately one word.** In `apps.json`:
+
+```
+"status": "building"   ->   "review"   ->   "live"
+```
+
+Then `./build.sh`. The card moves to the right section, gets the right badge, and an
+emptied section stops rendering its heading entirely. `build.sh` refuses to write a
+page containing a missing icon, an unknown status, a web app with no url, or a
+leftover `REPLACE_` placeholder.
 
 ## Deploying
 
