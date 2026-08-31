@@ -3,8 +3,8 @@
 > **LIVING STATUS: read this first.** Updated at the end of every working session,
 > before stopping. If this file is stale, nothing else in the repo can be trusted.
 
-*Written 2026-08-31, at the end of the session that created this repo. Picking up on
-a different machine — see § Moving to another machine.*
+*Written 2026-08-31 when this repo was created. Updated 2026-08-31 (later the same
+day) after Glen rewrote every blurb in his own voice.*
 
 ---
 
@@ -18,9 +18,9 @@ since 2026-08-31.
 | `apps.json` — the data | Complete | **Yes** — 10 apps, statuses confirmed by Glen 2026-08-31 |
 | `template.html` — the page shell | Complete | **Yes** |
 | `build.sh` — generator | Complete | **Yes** — status flip tested both directions; empty section drops its heading |
-| `apps.html` — the deployable file | Generated, 892 KB | **Yes** — all links verified HTTP 200, no placeholders remain |
+| `apps.html` — the deployable file | Generated, 978 KB | **Yes** — rendered and read in a browser; no stray emphasis markers, no placeholders |
 | Icons | Complete | **Yes** — 9 PNGs + 1 SVG, all inlined |
-| **Deployed to app.bestrongagain.com/apps** | **DONE** 2026-08-31 | **Yes** — 200, 913,670 b, md5 matches the committed file byte for byte |
+| **Deployed to app.bestrongagain.com/apps** | **DONE** 2026-08-31, redeployed with the new copy | **Yes** — 200, 1,001,287 b, md5 `e115248b…` matches the committed file byte for byte |
 | Link from bestrongagain.com | **DONE** 2026-08-31 | Yes — Glen linked it from the WordPress menu |
 
 ## Pick up here
@@ -31,6 +31,21 @@ and linked from bestrongagain.com.
 To change what it says, edit `apps.json`, run `./build.sh`, and redeploy — moving
 an app between sections is one word. The deploy is one scp of one self-contained
 file; see the commands below.
+
+### The copy is the page
+
+Each app in `apps.json` carries **`story`**, an array of paragraphs in Glen's
+voice — why the app exists, not what it does. `**bold**` and `*italic*` work
+inside a paragraph and nothing else does: `build.sh` escapes the string first,
+so those two markers are the only markup `apps.json` can put on the page. An
+unpaired marker fails the build rather than shipping a literal asterisk.
+
+`blurb` is still there and still true — the one-line version, kept for anywhere
+that needs a summary. It is **not** rendered on the page any more.
+
+**Season Book's entry is Glen's second pass** — the one about Grandma and Grandpa
+not being able to make the meet. He sent it separately from the batch and asked
+for that version specifically. Do not replace it with a shorter one.
 
 A note for whoever links it next time: bestrongagain.com is WordPress behind
 Cloudflare. Adding a *page* there and pasting the URL into it produces an empty
@@ -112,6 +127,24 @@ for a portfolio page is fine.
 **2026-08-31 — `build.sh` refuses to write a broken page.** It hard-fails on a
 missing icon, an unknown status, a web app with no url, or a surviving `REPLACE_`
 placeholder — the four failure modes that would otherwise only surface once live.
+Three more were added with the long-form copy: an app with no `story`, an
+unpaired `*`, and **a url carrying `?utm_source`**. That last one is not
+hypothetical — both web links arrived with a `chatgpt.com` tag attached, because
+the copy was pasted out of a chat. Shipping it would have tagged Glen's own
+visitors, on his own site, as arriving from somewhere they didn't.
+
+**2026-08-31 — One app is one block, not a card with the icon beside the text.**
+The stories run several paragraphs. Floating a 66px icon next to them leaves a
+tall ragged column beside a small square, and the old `.95rem` `--quiet` styling
+read as fine print. Icon, name and badge now sit on a header row with the story
+full width underneath in body text. It is his writing; it gets to look like
+writing.
+
+**2026-08-31 — `build.sh` looks for a Python rather than assuming `python3`.**
+On Windows `python3` is the Microsoft Store shim: it prints an install advert and
+exits 49. The deploy key lives on the Windows machine, so the build could not run
+where the deploy has to run from. It now tries `python3`, `python`, `py` and uses
+the first that actually executes.
 
 **2026-08-31 — The offer section has a filter on it, deliberately.** *"I take on a
 few of these a year. I would rather finish three things properly than start ten."*
@@ -126,6 +159,10 @@ named prospective buyer.
 
 - **Never hand-edit `apps.html`.** It is generated. Edit `apps.json` or
   `template.html` and rebuild.
+- **The page copy is Glen's, in Glen's voice.** The lede, *Why I build them*,
+  *One last thing* and every `story` are his words. Fix a typo; do not smooth the
+  rhythm, merge his one-line paragraphs, or make it sound like marketing. The
+  short paragraphs are how he talks.
 - **The statuses lie by default.** They were correct on 2026-08-31. Every approval
   makes this page wrong until someone changes one word.
 - **`bsa-coach-platform` is the repo that drifts.** Its own deploy doc says live code
