@@ -11,3 +11,8 @@
 # apps.html is generated. Keep it byte-identical wherever it is built, so a
 # diff against a deployed copy means something.
 apps.html -text
+
+# core.autocrlf is on for the Windows checkout, and a shell script with CRLF
+# line endings fails in ways that look nothing like line endings — bash reads
+# the \r as part of the last word on the line. Pin build.sh to LF everywhere.
+*.sh text eol=lf
