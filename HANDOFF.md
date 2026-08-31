@@ -10,8 +10,8 @@ a different machine — see § Moving to another machine.*
 
 ## Where this stands
 
-**Built, committed, pushed, and NOT yet deployed.** The page is finished and correct.
-Nobody can see it yet.
+**Live.** <https://app.bestrongagain.com/apps/>, linked from bestrongagain.com
+since 2026-08-31.
 
 | Piece | State | Verified? |
 |---|---|---|
@@ -149,10 +149,11 @@ automatically on the Mac; on a new machine, read it deliberately.
 
 ## Open questions for Glen
 
-1. **Where is `polly-connect-key.pem`?** Not on the Mac. Deployment is blocked
-   without it.
-2. **After deploying, what did the verify curl return** — 200 and the apps page, or
-   the coach dashboard? That decides whether nginx needs a `location` block.
+1. ~~Where is `polly-connect-key.pem`?~~ **Answered.** On the Windows machine, at
+   `Desktop/polly-connect-key.pem`. Deploys run from there, or the key gets
+   copied to the Mac.
+2. ~~What did the verify curl return?~~ **Answered.** 200 and the apps page. The
+   SPA catch-all did not swallow it and nginx needed no `location` block.
 3. **Should this page eventually list the web-only work** beyond Polly and the
    Workout Tracker — the leaderboard, the family calendar, the Pi kiosks? They are
    real and they are not on it.
