@@ -72,7 +72,13 @@ def card(a):
                  f'style="color:inherit;text-decoration:none">{H.escape(a.get("cta","Open"))} &rarr;</a></span>')
     else:
         badge = f'<span class="status {cls}">{label}</span>'
-    story = "\n".join(f'      <p>{inline(p)}</p>' for p in a["story"])
+    # A paragraph starting "> " is set apart. One line has needed it so far —
+    # the verse Two or Three is named after — and a quotation read as one more
+    # flat paragraph loses the reason the app exists.
+    story = "\n".join(
+        f'      <p class="quote">{inline(p[2:])}</p>' if p.startswith('> ')
+        else f'      <p>{inline(p)}</p>'
+        for p in a["story"])
     return f'''    <div class="app">
       <div class="app-head">
         <img src="{data_uri(a["icon"])}" alt="">
