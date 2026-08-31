@@ -21,12 +21,21 @@ Nobody can see it yet.
 | `apps.html` — the deployable file | Generated, 892 KB | **Yes** — all links verified HTTP 200, no placeholders remain |
 | Icons | Complete | **Yes** — 9 PNGs + 1 SVG, all inlined |
 | **Deployed to app.bestrongagain.com/apps** | **DONE** 2026-08-31 | **Yes** — 200, 913,670 b, md5 matches the committed file byte for byte |
-| Link from bestrongagain.com | Not done | — |
+| Link from bestrongagain.com | **DONE** 2026-08-31 | Yes — Glen linked it from the WordPress menu |
 
 ## Pick up here
 
-**Add the link from bestrongagain.com.** The page itself is live at
-<https://app.bestrongagain.com/apps/> and that is the only thing left.
+**Nothing outstanding.** The page is live at <https://app.bestrongagain.com/apps/>
+and linked from bestrongagain.com.
+
+To change what it says, edit `apps.json`, run `./build.sh`, and redeploy — moving
+an app between sections is one word. The deploy is one scp of one self-contained
+file; see the commands below.
+
+A note for whoever links it next time: bestrongagain.com is WordPress behind
+Cloudflare. Adding a *page* there and pasting the URL into it produces an empty
+page with the right name in the nav — the fix is a **Custom Link** menu item
+pointing at the URL, not a page.
 
 ### Deployed — and the catch-all did not eat it
 
