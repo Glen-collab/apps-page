@@ -4,7 +4,8 @@
 > before stopping. If this file is stale, nothing else in the repo can be trusted.
 
 *Written 2026-08-31 when this repo was created. Updated 2026-08-31 (later the same
-day) after Glen rewrote every blurb in his own voice.*
+day) after Glen rewrote every blurb in his own voice. Updated 2026-09-11 — seven
+apps are on the App Store, every badge is now a link, and two carry an Android note.*
 
 ---
 
@@ -15,10 +16,11 @@ since 2026-08-31.
 
 | Piece | State | Verified? |
 |---|---|---|
-| `apps.json` — the data | Complete | **Yes** — 10 apps, statuses confirmed by Glen 2026-08-31 |
+| `apps.json` — the data | Complete | **Yes** — 10 apps; statuses re-checked 2026-09-11 against the live App Store, not against memory |
 | `template.html` — the page shell | Complete | **Yes** |
-| `build.sh` — generator | Complete | **Yes** — status flip tested both directions; empty section drops its heading |
-| `apps.html` — the deployable file | Generated, 978 KB | **Yes** — rendered and read in a browser; no stray emphasis markers, no placeholders |
+| `build.sh` — generator | Complete | **Yes** — status flip tested both directions; empty section drops its heading; both new guards tested failing |
+| `apps.html` — the deployable file | Generated, 980 KB | **Yes** — rendered in a browser 2026-09-11 and every changed card read on screen |
+| App Store links | Complete | **Yes** — all 7, plus both web URLs, curl 200 on 2026-09-11 |
 | Icons | Complete | **Yes** — 9 PNGs + 1 SVG, all inlined |
 | **Deployed to app.bestrongagain.com/apps** | **DONE** 2026-08-31, redeployed with the new copy | **Yes** — 200, 1,001,287 b, md5 `e115248b…` matches the committed file byte for byte |
 | Link from bestrongagain.com | **DONE** 2026-08-31 | Yes — Glen linked it from the WordPress menu |
@@ -31,6 +33,34 @@ and linked from bestrongagain.com.
 To change what it says, edit `apps.json`, run `./build.sh`, and redeploy — moving
 an app between sections is one word. The deploy is one scp of one self-contained
 file; see the commands below.
+
+### What changed on 2026-09-11
+
+The statuses had gone stale exactly the way the README warned they would. Checked
+against the App Store itself — developer `6794905380`, via
+`https://itunes.apple.com/lookup?id=6794905380&entity=software&country=us` — rather
+than against what the repo believed:
+
+- **Strongman Contest** and **Season Book** were "in review"; both shipped (2 and 3
+  September). The *In review* section is now empty and stops rendering.
+- **Spotter** and **BizLedger** were "being built"; both shipped (4 and 9 September).
+- **BizLedger ships as `MultiBooks`.** The page name and the one line of story copy
+  that said "That's BizLedger" both follow the store, because a card that names an
+  app something the store has never heard of cannot be found. The repo stays
+  `business-ledger` and the bundle stays `com.wisconsinbarbell.businessledger`.
+- **Two or Three is still being built** — and it is the one app that is *not* on the
+  store. `gathering/HANDOFF.md` says the App Store record has not been created. It
+  was left in *Being built* on purpose.
+- **Every `live` badge is now a link** to its listing, and `build.sh` refuses to
+  build a `live` app without a `url`.
+- **`"android": "soon"`** is a new optional key adding a second badge, *Coming soon
+  to Android*. Cabin Notes and Season Book carry it — those are the only two apps
+  with an `android/` directory (`Glen-collab/cabin`, `Glen-collab/gymnast-meets`).
+  Cabin Notes is through Play internal testing; Season Book is not uploaded yet.
+
+**The Android badge has no expiry.** Delete the `android` key from `apps.json` the
+day either app is public on Play, or the page goes on promising something that
+already happened.
 
 ### The copy is the page
 

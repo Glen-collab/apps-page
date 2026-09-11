@@ -39,6 +39,10 @@ for a in apps:
         raise SystemExit(f'{a["id"]}: unknown status {a["status"]!r} — use one of {sorted(known)}')
     if a["status"] == "web" and not a.get("url"):
         raise SystemExit(f'{a["id"]}: a web app needs a url')
+    if a["status"] == "live" and not a.get("url"):
+        raise SystemExit(f'{a["id"]}: an App Store app needs a url — the badge is the link to the listing')
+    if a.get("android") not in (None, "soon"):
+        raise SystemExit(f'{a["id"]}: android must be "soon" or absent — it marks a port that is not on Play yet')
     if not a.get("story"):
         raise SystemExit(f'{a["id"]}: no story — the page is the copy, an app without it renders as a bare name')
     if "?utm_source" in a.get("url", ""):
@@ -70,8 +74,17 @@ def card(a):
     if a["status"] == "web":
         badge = (f'<span class="status {cls}"><a href="{H.escape(a["url"])}" '
                  f'style="color:inherit;text-decoration:none">{H.escape(a.get("cta","Open"))} &rarr;</a></span>')
+    elif a["status"] == "live":
+        # The badge is the link. A card that says "On the App Store" and then
+        # makes you go search for it is the one thing this page must not do.
+        badge = (f'<span class="status {cls}"><a href="{H.escape(a["url"])}" '
+                 f'style="color:inherit;text-decoration:none">{label} &rarr;</a></span>')
     else:
         badge = f'<span class="status {cls}">{label}</span>'
+    # A port that exists but is not on Play yet. One more word in apps.json —
+    # delete the "android" key the day it ships, or it quietly keeps promising.
+    if a.get("android") == "soon":
+        badge += ' <span class="status soon">Coming soon to Android</span>'
     # A paragraph starting "> " is set apart. One line has needed it so far —
     # the verse Two or Three is named after — and a quotation read as one more
     # flat paragraph loses the reason the app exists.

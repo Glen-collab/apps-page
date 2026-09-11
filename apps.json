@@ -11,7 +11,8 @@
       "The Week Ender gives you a plan before the weekend starts.",
       "Three questions. A simple plan. Something to follow when Friday turns into Saturday and Saturday turns into *“I'll start again Monday.”*",
       "**I needed this. So I built it.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/week-ender-weekend-plan/id6794905378"
   },
   {
     "id": "cabin",
@@ -29,7 +30,9 @@
       "Keep track of what's at the cabin. Take pictures. Make the bring-list. Keep the opening and closing checklist. Send guests the instructions.",
       "And when you're sitting at the cabin with no cell service?",
       "**It still works.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/cabin-notes/id6799505892",
+    "android": "soon"
   },
   {
     "id": "footsteps",
@@ -47,12 +50,13 @@
       "Make the donkey move. Build the story. Fix the mistake.",
       "And when the code doesn't work, Ada the owl is there to help instead of making them feel stupid.",
       "**Kids don't need another game that wastes their time. They need something that makes them want to learn.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/footsteps-of-the-teacher/id6795695844"
   },
   {
     "id": "strongman",
     "name": "Strongman Contest",
-    "status": "review",
+    "status": "live",
     "icon": "strongman.png",
     "blurb": "Run a whole contest from one phone, in a basement, with no internet.",
     "story": [
@@ -66,12 +70,13 @@
       "The scoring works the way a strongman contest should work.",
       "**I didn't build this because I thought there was a huge market for strongman scoring apps.**",
       "I built it because **I run strongman contests.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/strongman-contest/id6804407164"
   },
   {
     "id": "seasonbook",
     "name": "Season Book",
-    "status": "review",
+    "status": "live",
     "icon": "seasonbook.png",
     "blurb": "A gymnast's whole season, kept on your own iCloud and turned into a scrapbook you can send.",
     "story": [
@@ -86,7 +91,9 @@
       "Because the season shouldn't only belong to the people who were sitting in the bleachers.",
       "And your memories shouldn't belong to somebody else's server.",
       "**Your data. Your memories. You own them. Always.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/season-book/id6804511559",
+    "android": "soon"
   },
   {
     "id": "twoorthree",
@@ -116,7 +123,7 @@
   {
     "id": "spotter",
     "name": "Spotter",
-    "status": "building",
+    "status": "live",
     "icon": "spotter.png",
     "blurb": "The gym CRM for the person who owns the gym and still unlocks the door in the morning.",
     "story": [
@@ -130,12 +137,13 @@
       "Clients. Sessions. Payments. Simple.",
       "Your data stays yours. No server. No monthly fee.",
       "**Just the stuff you actually need.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/spotter-gym-client-book/id6807497220"
   },
   {
     "id": "bizledger",
-    "name": "BizLedger",
-    "status": "building",
+    "name": "MultiBooks",
+    "status": "live",
     "icon": "bizledger.png",
     "blurb": "What came in, what went out, how many miles — without becoming an accountant.",
     "story": [
@@ -144,11 +152,12 @@
       "They don't need a 47-step reconciliation process.",
       "They just need to know:",
       "**What came in?** **What went out?** **How many miles did I drive?**",
-      "That's BizLedger.",
+      "That's MultiBooks.",
       "I built it for the person who has a business but doesn't want their bookkeeping app to become another job.",
       "Simple accounting. No bank connection. No complicated chart of accounts.",
       "**No nonsense.**"
-    ]
+    ],
+    "url": "https://apps.apple.com/us/app/multibooks/id6809039183"
   },
   {
     "id": "polly",
