@@ -2,7 +2,7 @@
   {
     "id": "weekender",
     "name": "The Week Ender",
-    "status": "live",
+    "status": "building",
     "icon": "weekender.png",
     "blurb": "A plan for the weekend, made before the weekend starts. Three questions, one plan.",
     "story": [
@@ -11,8 +11,7 @@
       "The Week Ender gives you a plan before the weekend starts.",
       "Three questions. A simple plan. Something to follow when Friday turns into Saturday and Saturday turns into *“I'll start again Monday.”*",
       "**I needed this. So I built it.**"
-    ],
-    "url": "https://apps.apple.com/us/app/week-ender-weekend-plan/id6794905378"
+    ]
   },
   {
     "id": "cabin",
@@ -98,7 +97,7 @@
   {
     "id": "twoorthree",
     "name": "Two or Three",
-    "status": "building",
+    "status": "review",
     "icon": "twoorthree.png",
     "blurb": "Named for the verse in Matthew. Two or three people, one topic, ten minutes of actually talking.",
     "story": [
