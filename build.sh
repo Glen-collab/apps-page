@@ -6,6 +6,7 @@
 #
 # To move an app between sections, change ONE WORD in apps.json:
 #   "status": "building"  ->  "review"  ->  "live"
+#   plus "rebuilding" for one that shipped and came back down for work
 # then run this. Never hand-edit apps.html; it is generated.
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -24,12 +25,17 @@ done
 import base64, json, pathlib, re, html as H
 
 SECTIONS = [
-    ("live",     "On the App Store"),
-    ("review",   "In review"),
-    ("building", "Being built"),
-    ("web",      "On the web"),
+    ("live",       "On the App Store"),
+    ("review",     "In review"),
+    ("rebuilding", "Off the store while it gets better"),
+    ("building",   "Being built"),
+    ("web",        "On the web"),
 ]
+# "rebuilding" is not "building". One has never shipped; the other did, and came
+# back down on purpose. Saying "Coming" about an app people have already used
+# reads as though it had been abandoned.
 BADGE = {"live": ("live", "On the App Store"), "review": ("soon", "Submitted"),
+         "rebuilding": ("soon", "Under construction"),
          "building": ("soon", "Coming"), "web": ("live", None)}
 
 apps = json.loads(pathlib.Path('apps.json').read_text(encoding='utf-8'))
